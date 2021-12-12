@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: somomassdfinal 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: somomassdfinal
+  template:
+    metadata:
+      labels:
+        app: somomassdfinal 
+    spec:
+      containers:
+        - name: somomassdfinal 
+          image: finalprojectcontainerregistry.azurecr.io/somomassdfinal
+          ports:
+          - containerPort: 8081
